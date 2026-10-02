@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Green color theme */
+/* :root {
+    --bg: #F4F8F6;
+    --sf: #fff;
+    --ink: #0B1712;
+    --mute: #51625B;
+    --line: #D5E0DB;
+    --acc: #0B9C6B;
+    --on: #fff;
+    --glow: rgba(11, 156, 107, .22);
+    --ghost: rgba(11, 23, 18, .045)
+}
+
+.dark {
+    --bg: #070B10;
+    --sf: #0D131B;
+    --ink: #EAF0F5;
+    --mute: #8B98A8;
+    --line: #1E2935;
+    --acc: #3EE8B0;
+    --on: #04120C;
+    --glow: rgba(62, 232, 176, .25);
+    --ghost: rgba(255, 255, 255, .035)
+} */
+
+/* Blue color theme */
+:root {
+    --bg: #F6F8FC;
+    --sf: #FFFFFF;
+    --ink: #0F172A;
+    --mute: #526079;
+    --line: #DDE3EF;
+    --acc: #2563EB;
+    --on: #FFFFFF;
+    --glow: rgba(37, 99, 235, .20);
+    --ghost: rgba(15, 23, 42, .045);
+    --bannerShadow1: rgba(96, 165, 250, .1);
+    --bannerShadow2: rgba(96, 165, 250, .2);
+
+}
+
+.dark {
+    --bg: #0A0F1E;
+    --sf: #111A2E;
+    --ink: #E6EBF5;
+    --mute: #93A0B8;
+    --line: #1F2A44;
+    --acc: #60A5FA;
+    --on: #06101F;
+    --glow: rgba(96, 165, 250, .24);
+    --ghost: rgba(255, 255, 255, .035);
+    --bannerShadow1: rgba(96, 165, 250, .1);
+    --bannerShadow2: rgba(96, 165, 250, .2);
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, sans-serif;
+    line-height: 1.7;
+    transition: background .35s, color .35s;
+    overflow-x: hidden
+}
+
+.eyebrow {
+    @apply font-mono text-[11.5px] uppercase tracking-[.2em] text-acc flex items-center gap-2 mb-3.5
+}
+
+.eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--acc)
+}
+
+.card {
+    @apply bg-sf border border-line rounded-2xl p-6 transition-all duration-300 hover:border-acc hover:shadow-glow hover:-translate-y-0.5
+}
+
+.pill {
+    @apply font-mono text-[11px] px-3 py-1 rounded-full border border-line text-acc
+}
+
+.tag {
+    @apply font-mono text-[11.5px] px-3 py-1 rounded-full border border-line transition-colors hover:border-acc hover:text-acc
+}
+
+.page {
+    animation: up .6s cubic-bezier(.2, .7, .2, 1) both
+}
+
+.rv {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .8s, transform .8s cubic-bezier(.2, .7, .2, 1)
+}
+
+.rv.in {
+    opacity: 1;
+    transform: none
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-behavior: auto
+    }
+
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    body {
+        overflow-x: clip;
+    }
+
+    .rv {
+        opacity: 1;
+        transform: none;
+    }
+
+    .marquee-copy {
+        display: none;
+    }
+
+    section:not(#home) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    #home {
+        padding-top: 6rem;
+        padding-bottom: 1rem;
+    }
+
+    #home h1 {
+        font-size: clamp(2.5rem, 13vw, 4rem);
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    #home .hero-visual-motion {
+        animation: none !important;
+    }
+
+    #home pre {
+        font-size: .68rem;
+    }
+
+    footer {
+        padding-top: 3rem;
+    }
+
+    a, p, li, h1, h2, h3, span {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        animation: none !important;
+        transition: none !important
+    }
+
+    .rv {
+        opacity: 1;
+        transform: none
+    }
+}
