@@ -54,7 +54,7 @@ export default function About() {
             memoization.
           </p>
           <p className="text-mute mb-6">
-            With working knowledge of Node.js, Express.js, and MongoDB, I
+            With working knowledge of Node.js, Express.js, FastAPI and MongoDB, I
             contribute to end-to-end feature delivery and collaborate
             effectively with backend, QA, and product teams in Agile/Scrum
             environments to ship production-ready features on schedule.

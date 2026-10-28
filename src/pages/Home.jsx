@@ -155,7 +155,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Marquee items={marquee} className="mt-10" />
+      <Marquee items={marquee} className="mt-12" />
     </section>
   );
 }

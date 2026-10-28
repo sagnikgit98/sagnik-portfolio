@@ -11,7 +11,7 @@ export const me = {
     "Front-End Developer",
     "React.js Developer",
     "Frontend Engineer",
-    "Next.js Developer",
+    "Full Stack Developer",
   ],
 };
 export const nav = [
@@ -29,6 +29,7 @@ export const marquee = [
   "Astro.js",
   "TypeScript",
   "JavaScript",
+  "Python",
   "Tailwind CSS",
   "Redux",
   "React Query",
@@ -58,6 +59,7 @@ export const skills = [
       "React Query",
       "React Hooks",
       "Astro.js",
+      "Python",
       "Tailwind CSS",
       "Material UI",
       "Bootstrap",
@@ -68,7 +70,7 @@ export const skills = [
   [
     "// how I handle data & logic",
     "Back-End",
-    ["Node.js", "Express.js", "MongoDB", "REST APIs"],
+    ["Node.js", "Express.js", "MongoDB", "FastAPI", "REST APIs"],
   ],
   [
     "// how I ship",
@@ -98,6 +100,7 @@ export const jobs = [
       "Built modular, reusable JSX components that cut code duplication.",
       "Designed responsive, accessible UI with Tailwind CSS, HTML5 and CSS3.",
       "Integrated REST APIs and query mutations with backend teams.",
+      "Worked with Node.js, MongoDB, and FastAPI to develop backend APIs, handle database operations, and support frontend-backend integration.",
       "Optimized with code splitting, lazy loading and memoization.",
       "Worked with QA to resolve production issues in Agile/Scrum.",
     ],

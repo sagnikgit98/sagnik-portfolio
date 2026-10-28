@@ -99,6 +99,10 @@ body {
     animation: up .6s cubic-bezier(.2, .7, .2, 1) both
 }
 
+.animate-mq {
+    animation: mq 30s linear infinite !important;
+}
+
 .rv {
     opacity: 0;
     transform: translateY(24px);
@@ -120,6 +124,10 @@ body {
         transition: none !important;
     }
 
+    .typing-caret {
+        animation: bl 1s steps(2) infinite !important;
+    }
+
     body {
         overflow-x: clip;
     }
@@ -127,10 +135,6 @@ body {
     .rv {
         opacity: 1;
         transform: none;
-    }
-
-    .marquee-copy {
-        display: none;
     }
 
     section:not(#home) {
